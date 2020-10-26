@@ -1,0 +1,1 @@
+Implemented as much of the Google homepage as possible, without input/link/button functionality, introduction to HTML and CSS.
