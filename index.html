@@ -1,86 +1,135 @@
 <style>
-
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.centercontainer {
-    padding-top: 135px;
-    text-align: center;
-}
-
-.centerbuttons {
-    padding-top: 10px;
-    text-align: center;
-}
-
-.navbar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  display: inline;
-}
-
-.footnav {
-  background-color: #f2f2f2;
-  overflow: hidden;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-.footnav a {
-    float: left;
-    display: block;
-    text-align: center;
-    padding: 5px 5px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.footnav-right {
-    float:right;
-}
-</style>
-
-<html>
-    <head>
-        <ul class ="navbar">
-            <li><a href="">About</a></li>
-            <li><a href="">Store</a></li>
-            <li><button style="float:right; padding-right:5px;" onclick="">Sign In</button></li>
-            <li><a href="" style="float:right; padding-right:5px;">Images</a></li>
-            <li><a href="" style="float:right; padding-right:5px;">Gmail</a></li>
-        </ul>
-    </head>
-
-    <body>
-        <div class="centercontainer">
-            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
-            <input type="text" size="50">
-        </div>
-        <div class="centerbuttons">
-            <button>Google Search</button>
-            <button>I'm Feeling Lucky</button>
-        </div>
-    </body>
-    <footer>
-        <div class ="footnav">
-            <a href="">Advertising</a>
-            <a href="">Business</a>
-            <a href="">How Search Works</a>
-            <div class ="footnav-right">
-                <a href="">Privacy</a>
-                <a href="">Terms</a>
-                <a href="">Settings</a>
+    .center-image {
+        text-align: center;
+        padding-top: 135px;
+    }
+    
+    .center-textbox {
+        font-family: arial,sans-serif;
+        font-size: 14px;
+        text-align: center;
+        padding-top: 15px;
+    }
+    
+    .center-input {
+        height: 40px;
+        border-radius: 25px;
+        border: 1px solid rgba(0,0,0,.87);
+        outline: none;
+        padding-left: 15px;
+    }
+    
+    .center-buttons {
+        font-family: arial,sans-serif;
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    .header {
+        font-family: arial,sans-serif;
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    .upper-left {
+        padding-right: 10px;
+    }
+    .upper-right {
+        float: right;
+        padding-right: 10px;
+    }
+    
+    .navbar {
+        background: #f2f2f2;
+        font-family: arial,sans-serif;
+        font-size: 14px;
+        padding: 10px;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 20px;
+    }
+    
+    .navbar-right {
+        float: right;
+    }
+    
+    .navbar a {
+        padding: 5px;
+        color: #70757a;
+    }
+    
+    #navsettings {
+        padding-right: 35px;
+    }
+    
+    a:link {
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    #appimage {
+        height: 24px;
+        width: 24px;
+        padding-left: 5px;
+        padding-right: 20px;
+    }
+    
+    #signinbutton {
+        background-color: #4285f4;
+        border: 1px solid #4285f4;
+        color: white;
+        line-height: 25px;
+        cursor: pointer;
+    }
+    
+    .searchbutton {
+        background-color: #f8f9fa;
+        border-radius: 4px;
+        height: 36px;
+        cursor: pointer;
+        border: 1px solid #f8f9fa;
+    }
+    </style>
+    
+    <html>
+        <head>
+            <div class="header">
+                <a href="" class="upper-left">About</a>
+                <a href="" class="upper-left">Store</a>
+                <button class="upper-right" id="signinbutton">Sign In</button>
+                <a href="" class="upper-right"><img src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_apps_48px-512.png" alt="google apps icon" id="appimage"></a>
+                <a href="" class="upper-right">Images</a>
+                <a href="" class="upper-right">Gmail</a>
             </div>
-        </div>
-    </footer>
-
-
-</html>
+        </head>
+        
+        <body>
+            <div class="center-image">
+                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google logo">
+            </div>
+            <div class="center-textbox">
+                <input type="textbox" class="center-input" size="80">
+            </div>
+            <div class="center-buttons">
+                <button class="searchbutton"> Google Search </button>
+                <button class="searchbutton"> I'm Feeling Lucky </button>
+            </div>
+        </body>
+    
+        <footer>
+            <div class="navbar">
+                <a href="">Advertising</a>
+                <a href="">Business</a>
+                <a href="">How Search Works</a>
+                <div class="navbar-right">
+                    <a href="">Privacy</a>
+                    <a href="">Terms</a>
+                    <a href="" id="navsettings">Settings</a>
+            </div>
+        </footer>
+    </html>
